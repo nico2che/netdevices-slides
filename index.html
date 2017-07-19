@@ -38,10 +38,6 @@
 					<h2>Sommaire</h2>
 					<ul>
 						<li>Introduction</li>
-						<ul>
-							<li>Web2Mobile</li>
-							<li>Sharry</li>
-						</ul>
 						<li>Contexte du stage</li>
 						<li>Premiers projets</li>
 						<li>Cahier des charges</li>
@@ -59,24 +55,56 @@
 						<h2>Introduction</h2>
 						<ul>
 							<li>NetDevices, expert dans le numérique depuis 2009</li>
-							<li>Outils internes : Web2Mobile, Sharry</li>
+							<li>Outils internes</li>
+							<ul>
+								<li>Web2Mobile</li>
+								<li>Sharry</li>
+							</ul>
 						</ul>
 						<aside class="notes">
 							App & Sites<br>
 							-> Clients extérieurs<br>
-							Partenaire IBM<br>
+							-> Spécialistes JS<br>
+
 						</aside>
 					</section>
-					<section>
-						<h2>Web2Mobile</h2>
-						<p>Infogreffe</p>
+					<section id="organisation">
+						<h2>Organisation de NetDevices</h2>
+						<ul>
+							<li>Commerciaux</li>
+							<li>Développeurs</li>
+							<li>Web Designer</li>
+							<li>Chef de Projets</li>
+							<li>Communication</li>
+						</ul>
 						<aside class="notes">
 
 						</aside>
 					</section>
 					<section>
+						<h2>Web2Mobile</h2>
+						<span class="fragment fade-out" data-fragment-index="0">
+							<ul>
+								<li>Transformer l'apparence d'un site internet</li>
+								<li>Créer une version mobile</li>
+								<li>Agit comme une interface</li>
+								<li>Référencement optimisé</li>
+							</ul>
+						</span>
+						<span class="fragment fade-in" data-fragment-index="0">
+							<video  class="stretch" src="videos/infogreffe.webm" style="width:700px;margin-top:-250px"></video>
+						</span>
+						<aside class="notes">
+							Exemple avec infogreffe.fr
+						</aside>
+					</section>
+					<section>
 						<h2>Sharry</h2>
-						<p>Economie collaborative</p>
+						<ul>
+							<li>Concept de l'économie collaborative</li>
+							<li>Réutilisation du code d'une application</li>
+							<li>Parki</li>
+						</ul>
 						<aside class="notes">
 
 						</aside>
@@ -85,7 +113,14 @@
 				<!-- CONTEXTE DU STAGE -->
 				<section>
 					<h2>Contexte du stage</h2>
-					<p>Refaire sharry</p>
+					<ul>
+						<li>Retravailler Sharry</li>
+						<li>Cas d'utilisation: Baby'lib</li>
+						<ul>
+							<li>Mise en contact de parents et de babysitter</li>
+						</ul>
+						<li>Parki</li>
+					</ul>
 					<aside class="notes">
 
 					</aside>
@@ -177,6 +212,7 @@
 			Reveal.initialize({
                 controls: true,
                 previewLinks: false,
+                slideNumber: true,
                 viewDistance: 30,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
@@ -185,6 +221,14 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+            Reveal.configure({
+                keyboard: {
+                    // "a" will start video on current slide
+                    65: function() {
+                        Reveal.getCurrentSlide().querySelector('video').play();
+					}
+                }
+            });
 		</script>
 	</body>
 </html>
