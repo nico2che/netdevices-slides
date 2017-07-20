@@ -13,6 +13,18 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<style>
+			#demo .video-wrapper {
+				height:430px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#demo video.sized {
+				width: 270px;
+			}
+		</style>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -92,7 +104,7 @@
 							</ul>
 						</span>
 						<span class="fragment fade-in" data-fragment-index="0">
-							<video  class="stretch" src="videos/infogreffe.webm" style="width:700px;margin-top:-250px"></video>
+							<video  class="stretch" src="videos/infogreffe.webm" style="width:700px;margin-top:-200px"></video>
 						</span>
 						<aside class="notes">
 							Exemple avec infogreffe.fr
@@ -114,19 +126,23 @@
 				<section>
 					<h2>Contexte du stage</h2>
 					<ul>
-						<li>Retravailler Sharry</li>
+						<li>Mettre à jour Sharry</li>
 						<li>Cas d'utilisation: Baby'lib</li>
 						<ul>
 							<li>Mise en contact de parents et de babysitter</li>
 						</ul>
-						<li>Parki</li>
+						<li>Terminer Parki</li>
+						<li>...</li>
 					</ul>
 					<aside class="notes">
-
+						Reprendre parki pour faire baby'lib<br>
+						Baby'lib sera sharry<br>
+						Prendre sharry pour refaire parki
 					</aside>
 				</section>
 				<!-- PREMIERS PROJETS -->
 				<section>
+					<section>
 						<h2>Premiers projets</h2>
 						<ul>
 							<li>Paramédic</li>
@@ -135,14 +151,104 @@
 						<aside class="notes">
 
 						</aside>
+					</section>
+					<section>
+						<h2>Paramédic</h2>
+						<ul>
+							<li>Ambulances "uberisées"</li>
+							<li>Découverte des outils chez NetDevices</li>
+							<ul>
+								<li>Git & GitLab</li>
+								<li>Trello, JIRA</li>
+								<li>Bamboo</li>
+							</ul>
+							<li>Découverte de React Native</li>
+							<ul>
+								<li>ES2015 & 2016</li>
+								<li>Structure d'une application</li>
+								<li>Composants, design, navigation...</li>
+							</ul>
+						</ul>
+						<aside class="notes">
+							dispo des ambulances<br>
+							-> temps réel<br>
+							-> 3 applis diff<br><br>
+
+							Outils:<br>
+							-> Git & GitLab<br>
+							-> Trello<br>
+							-> JIRA<br>
+							-> Bamboo<br>
+							-> Slack<br>
+						</aside>
+					</section>
+					<section>
+						<h2>Société Générale</h2>
+						<ul>
+							<li>Présentation de données</li>
+							<li>Découverte avancée de React Native</li>
+							<ul>
+								<li>Redux</li>
+								<li>Connexion à une API</li>
+								<li>Gestion des langues</li>
+							</ul>
+						</ul>
+						<aside class="notes">
+
+						</aside>
+					</section>
 				</section>
 				<!-- CAHIER DES CHARGES -->
 				<section>
-					<h2>Cahier des charges</h2>
-					<p>Fonctionnalités</p>
-					<aside class="notes">
+					<section>
+						<h2>Cahier des charges</h2>
+						<ul>
+							<li>Baby'lib</li>
+							<li>Sharry</li>
+						</ul>
+						<aside class="notes">
 
-					</aside>
+						</aside>
+					</section>
+					<section>
+						<h2>Cahier des charges: Baby'lib</h2>
+						<ul>
+							<li>Landing Page</li>
+							<li class="fragment fade-up" data-fragment-index="1">Application Android et iOS</li>
+							<ul class="fragment fade-up" data-fragment-index="1">
+								<li>Inscription & Connexion, Profil</li>
+								<li>Carte pour situer les babysitters/parents</li>
+								<li>Créer la rencontre parent - babysitter</li>
+								<ul>
+									<li>Faire des demandes/propositions</li>
+									<li>Accepter ou refuser ces demandes/propositions</li>
+									<li>Paiement</li>
+								</ul>
+								<li>Plusieurs types de babysitter: agréé ou non</li>
+								<li>Historique, Tarifs, Contact</li>
+							</ul>
+							<li class="fragment fade-up" data-fragment-index="2">Administration</li>
+							<ul class="fragment fade-up" data-fragment-index="2">
+								<li>Aperçu et gestion des utilisateurs et babysittings</li>
+							</ul>
+						</ul>
+						<aside class="notes">
+
+						</aside>
+					</section>
+					<section>
+						<h2>Cahier des charges: Sharry</h2>
+						<ul>
+							<li>Pensez au maximum l'application Baby'lib</li>
+							<ul>
+								<li>Repérer ce qui peut être générique</li>
+								<li>Rendre tout ce qui n'est pas générique modifiable facilement</li>
+							</ul>
+						</ul>
+						<aside class="notes">
+
+						</aside>
+					</section>
 				</section>
 				<!-- TRAVAIL EFFECTUE -->
 				<section>
@@ -160,12 +266,35 @@
 					</section>
 					<section>
 						<h2>Analyse</h2>
+						<ul>
+							<li>Parki</li>
+							<ul>
+								<li>Comprendre le fonctionnement de l'application</li>
+								<li>Lire le code de l'application et de l'API</li>
+								<li>Repérer tout ce qui peut être réutilisable</li>
+								<ul class="fragment fade-up">
+									<li>10% de l'application React Native</li>
+									<li>70% de l'API</li>
+								</ul>
+							</ul>
+						</ul>
 						<aside class="notes">
 
 						</aside>
 					</section>
 					<section>
 						<h2>Conception</h2>
+						<h4>Modèle de données de Baby'lib</h4>
+						<img style="width: 380px" src="image/modele-de-donnees.jpg">
+						<aside class="notes">
+
+						</aside>
+					</section>
+					<section>
+						<h2>Conception</h2>
+						<h4>Schéma fonctionnel</h4>
+						<img style="width: 500px" src="image/fonctionnel-1.jpg">
+						<img style="width: 420px" src="image/fonctionnel-2.jpg">
 						<aside class="notes">
 
 						</aside>
@@ -184,12 +313,26 @@
 					</section>
 				</section>
 				<!-- DEMONSTRATION -->
-				<section>
-					<h2>Démonstration</h2>
-					<p>live</p>
-					<aside class="notes">
-
-					</aside>
+				<section id="demo">
+					<section>
+						<h2>Démonstration</h2>
+						<video class="sized" controls src="videos/1-parent.mov"></video>
+						<video class="fragment fade-up sized" controls src="videos/1-baby.mov"></video>
+					</section>
+					<section>
+						<h2>Démonstration</h2>
+						<video class="sized" controls src="videos/2-parent.mov"></video>
+						<video class="fragment fade-up sized" controls src="videos/2-baby.mov"></video>
+					</section>
+					<section>
+						<h2>Démonstration</h2>
+						<video class="sized" controls src="videos/3-parent.mov"></video>
+						<video class="fragment fade-up sized" controls src="videos/3-baby.mov"></video>
+					</section>
+					<section>
+						<h2>Démonstration</h2>
+						<video src="videos/4.webm" controls style="width:550px"></video>
+					</section>
 				</section>
 				<!-- CONCLUSION -->
 				<section>
@@ -213,7 +356,6 @@
                 controls: true,
                 previewLinks: false,
                 slideNumber: true,
-                viewDistance: 30,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -221,12 +363,17 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+            var a = false, z = false, e = false, r = false, t = false;
+            function v(a, b) {
+                var video = Reveal.getCurrentSlide().querySelectorAll('video')[b];
+                a ? video.pause() : video.play();
+                return !a;
+			}
             Reveal.configure({
                 keyboard: {
-                    // "a" will start video on current slide
-                    65: function() {
-                        Reveal.getCurrentSlide().querySelector('video').play();
-					}
+                    65: function(){a = v(a, 0)},
+                    90: function(){z = v(z, 1)},
+                    69: function(){e = v(e, 2)}
                 }
             });
 		</script>
